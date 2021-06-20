@@ -1,13 +1,13 @@
 ---
-layout: post
 title: "Looking at the past"
 description: "Introducing history tracking for Home Assistant."
 date: 2015-02-08 9:01:23 -0800
 date_formatted: "February 8, 2015"
 author: Paulus Schoutsen
 author_twitter: balloob
-comments: true
-categories: Release-Notes
+categories:
+- Release-Notes
+- Core
 ---
 
 Ever since the launch of Home Assistant you have been able to track the state of your house. But the view has always been limited to what the current state is. Not what it was. Today we are going to change that by introducing two brand new components:
@@ -22,14 +22,14 @@ Adding history to the UI was a challenge on itself because the old UI did not su
 The history component will be enabled for new users by default. For current users, run `scripts/update` to upgrade to the latest version and add `[history]` to your `home-assistant.conf` file.
 
 <p class='img'>
-  <a href='{{site_root}}/images/screenshots/component_history_24h.png'>
-    <img src='{{site_root}}/images/screenshots/component_history_24h.png' />
+  <a href='/images/screenshots/component_history_24h.png'>
+    <img src='/images/screenshots/component_history_24h.png' />
   </a>
 </p>
 
-<p class='note'>
+<div class='note'>
 Events are saved in a local database. Google Graphs is used to draw the graph. Drawing is happening 100% in your browser - no data is transferred to anyone at any time.
-</p>
+</div>
 
 <!--more-->
 

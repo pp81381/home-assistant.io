@@ -1,11 +1,6 @@
 ---
-layout: page
 title: "Connection error"
 description: "Connection error"
-date: 2017-06-18 09:00
-comments: false
-sharing: true
-footer: true
 ha_category: Usage
 ---
 
@@ -15,4 +10,4 @@ It can happen that you get a traceback that notify you about connection issues w
 ConnectionRefusedError: [Errno 111] Connection refused
 ```
 
-The chance is very high that this is not a bug but an issue with the service/daemon itself. Check your network (DNS, DHCP, uplink, etc.) first and make sure that Home Assistant and the service are poperly configured. Keep in mind that webservices can be down.
+The chance is very high that this is not a bug but an issue with the service/daemon itself. Check your network (DNS, DHCP, uplink, etc.) first and make sure that Home Assistant and the service are properly configured. Keep in mind that webservices can be down.

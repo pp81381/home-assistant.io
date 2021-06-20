@@ -1,10 +1,10 @@
-{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}{% include site/head.html %}
-
+{% include site/head.html %}
   <body {% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
 
     <header class='site-header'>
       {% include site/header.html %}
     </header>
+    <div class="page-content">
 
     {% if page.hero_unit %}
       {% include site/hero_unit.html %}
@@ -20,8 +20,11 @@
         <div class="grid__item two-thirds lap-one-whole palm-one-whole">
         {% endif %}
 
-          {{ content | nofollow }}
-
+          {% if page.is_homepage %}
+            {{ content }}
+          {% else %}
+            {{ content | output_modder }}
+          {% endif %}
         </div>
 
         {% unless page.sidebar == false %}
@@ -36,6 +39,7 @@
       {% include site/footer.html %}
     </footer>
 
+  </div>
     {% include javascripts/scripts.html %}
   </body>
 </html>

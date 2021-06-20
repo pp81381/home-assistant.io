@@ -1,14 +1,9 @@
 ---
-layout: page
 title: "Releases"
-description: "Releases"
-date: 2017-06-18 09:00
-sidebar: true
-comments: false
-sharing: true
-footer: true
+description: "Home Assistant release schedule"
 ha_category: Common
 ---
 
-The usual release cycle is two weeks. Every other weekend will a new release of Home Assistant be available. There is no fix day or time when the release will happen because that depends on the person who is finishing the release. It can already be Monday at your location. If there was no announcement made in the previous release notes or on another communication channel then the release will happen.
-  
+New versions of Home Assistant are released on the first Wednesday of every month. The exact dates can be seen in the upcoming events calendar on the [Home Assistant Developers](https://developers.home-assistant.io/) website. 
+
+The last week of our release schedule is primarily focused on beta testing. Users who participate in the beta can view the changelog under [beta release notes](https://rc.home-assistant.io/latest-release-notes/) and get help in the `#beta` channel of [Home Assistant's Discord server](/join-chat). Testers are also encouraged to [report issues on GitHub](/help/#bugs-feature-requests-and-alike).

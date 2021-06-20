@@ -1,22 +1,19 @@
 ---
-layout: page
 title: "Light Card"
 sidebar_label: Light
 description: "The Light card allows you to change the brightness of the light."
-date: 2018-10-29 10:28 +00:00
-sidebar: true
-comments: false
-sharing: true
-footer: true
 ---
 
 The Light card allows you to change the brightness of the light.
-Note: Long-press on the bulb to bring up the `more-info` dialog.
 
 <p class='img'>
 <img src='/images/lovelace/lovelace_light_card.png' alt='Screenshot of the Light card'>
 Screenshot of the Light card.
 </p>
+
+To add the Light card to your user interface, click the Lovelace menu (three dots at the top right of the screen) and then **Edit Dashboard**. Click the "Add Card" button in the bottom right corner and select **Light** from the card picker. All options for this card can be configured via the user interface.
+
+Alternatively, the card can be configured using YAML:
 
 ```yaml
 type: light
@@ -26,20 +23,37 @@ entity: light.bedroom
 {% configuration %}
 type:
   required: true
-  description: light
+  description: "`light`"
   type: string
 entity:
   required: true
-  description: Home Assistant Light Domain entity ID.
+  description: Entity ID of `light` domain.
   type: string
 name:
   required: false
   description: Overwrites friendly name.
   type: string
-  default: Name of Entity
+  default: Name of entity
+icon:
+  required: false
+  description: Overwrites icon.
+  type: string
+  default: Entity domain icon
+theme:
+  required: false
+  description: Override the used theme for this card with any loaded theme. For more information about themes, see the [frontend documentation](/integrations/frontend/).
+  type: string
+hold_action:
+  required: false
+  description: Action taken on card tap and hold. See [action documentation](/lovelace/actions/#hold-action).
+  type: map
+double_tap_action:
+  required: false
+  description: Action taken on card double tap. See [action documentation](/lovelace/actions/#double-tap-action).
+  type: map
 {% endconfiguration %}
 
-## {% linkable_title Examples %}
+## Examples
 
 Overwriting names example:
 
